@@ -1,0 +1,112 @@
+/*colores base del proyecto*/
+:root {
+  --bg-main: rgb(22,22,30);
+  --bg-header: rgb(30,30,38);
+  --bg-card: rgb(35,35,45);
+  --text-primary: rgb(235,235,245);
+  --text-secondary: rgb(180,180,200);
+  --accent: rgb(210,45,70);
+  --accent-hover: rgb(255,80,95);
+  --success: rgb(0,150,0);
+  --error: rgb(200,30,30);
+}
+
+
+
+
+
+
+
+/* formulario de contacto */
+
+.formulario{
+    text-align: center;
+}
+
+
+.formulario :required{
+    border: 2px solid blueviolet;
+}
+
+.formulario :user-invalid{
+    border: 2px solid red;
+}
+
+.formulario :valid{
+    border: 2px solid green;
+}
+
+
+
+
+
+/*body de todas las paginas */
+body{
+    font-family: Helvetica;
+}
+
+
+/*header de todas las paginas */
+/*no hecho*/
+header{
+    background-color: darkgrey;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px dotted rgb(45, 45, 45);
+    justify-content: center;
+    padding: 10px;
+    display: flex;
+}
+
+header h1{
+    size: 2px;
+}
+
+.indice li{
+    color: black;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.indice a{
+    color: black;
+    text-decoration: none;
+}
+
+.indice :hover{
+    transition: 1s;
+    color: rgb(83, 0, 58);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer de todas las paginas */    
+
+/*cambiar nombre*/
+
+footer{
+    color: rgb(112, 0, 0);
+    background-color: rgb(157, 157, 157);
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    height: 75px;
+    align-content: center;
+}
