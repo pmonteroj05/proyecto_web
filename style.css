@@ -1,4 +1,4 @@
-/*colores base del proyecto*/
+/* colores base del proyecto */
 :root {
     --blanco-texto: #f5f5f5;
     --negro-texto: #000000;
@@ -7,6 +7,7 @@
     --azul-oscuro: #1e2b3b;
     --gris-base: #a9a9a9;
     --blanco-base: #c9c9c9;
+    --gris-sombra: #2c2c2c;
 
     --valido: #28a745;
     --fondo-valido: #d5f7dd;
@@ -18,7 +19,7 @@
     --fondo-obligatorio: #fae6d6;
 }
 
-/*header de todas las paginas */
+/* header de todas las paginas */
 header{
     background-color: var(--azul-oscuro);
     border-radius: 5px;
@@ -73,7 +74,7 @@ header img{
     color: var(--azul-oscuro);
 }
 
-/*body de todas las paginas */
+/* body de todas las paginas */
 body{
     font-family: Helvetica;
     background-color: var(--gris-base);
@@ -81,7 +82,7 @@ body{
     border-radius: 10px;
 }
 
-/*título todas las paginas*/
+/* título todas las paginas */
 
 h6{
     font-size: xx-large;
@@ -99,8 +100,7 @@ h6{
 
 
 
-/*Página de inicio*/
-
+/* Página de inicio */
 .inicio {
     background-image: url(recursos/libr_index.jpg);
     background-repeat: no-repeat;
@@ -111,7 +111,7 @@ h6{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 1800px;
+    max-width: 60%;
     margin: auto;
     margin-top: 40px;
     padding: 10px;
@@ -120,7 +120,7 @@ h6{
 }
 
 
-    /*estilo para parrafos de la pagina principal*/
+    /* Estilo para parrafos de la página principal */
 #parrafo{
     width: 800px;
     height: auto;
@@ -142,10 +142,8 @@ h6{
 }
 
     /*tabla principal*/
-
 .tabla{
     width: auto;
-    max-width: 95%;
     min-width: 700px;
     margin: auto;
     margin-bottom: 40px;
@@ -173,11 +171,11 @@ thead{
     background-color: var(--azul-oscuro);
 }
 
-tbody :nth-child(odd) td{
+tbody tr:nth-child(odd){
     background-color: var(--azul-claro);
 }
 
-tbody :nth-child(even) td{
+tbody tr:nth-child(even){
     background-color: var(--azul-medio);
 }
 
@@ -221,19 +219,23 @@ tbody :nth-child(even) td{
 
 /*pagina de contenido*/
     /*lista autores y libros*/
-.contenido h2{
-    display: flex;
-    text-align: center;
-    color: #74aaaa;
-    width: 1000px;
-    height: auto;
-    padding: 20px;
-    align-content: center;
-    justify-content: center;
-    justify-self: center;
-    background-color: #7a1f5c;
-    border-radius: 10px;
+
+.contenido{
+    background-image: url(recursos/libr_cont.jpg);
+    background-repeat: repeat;
+    background-size: 1000px;
 }
+
+.contenido > .list{
+    background-color: var(--gris-base);
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 20%;
+    max-width: 60%;
+    display: block;
+    align-items: center;
+}
+
 
 
 .list > li{
@@ -252,7 +254,7 @@ tbody :nth-child(even) td{
     padding: 0px;
     margin-top: 10px;
     list-style: none;
-    color: #FFFFFF;
+    color: var(--blanco-texto);
     align-items: start;
 }
 
@@ -263,8 +265,8 @@ tbody :nth-child(even) td{
     width: 350px;
     height: 260px;
     
-    background:radial-gradient(transparent, #7a1f5c, #591628);  
-    border: 4px solid #223D40;
+    background:radial-gradient(transparent, var(--azul-medio), var(--azul-oscuro));  
+    border: 4px solid var(--negro-texto);
     padding: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -287,20 +289,27 @@ tbody :nth-child(even) td{
 }
 
 li#elemespec{
-    background:radial-gradient(transparent,#367571, #223D40);  
-    border-image-source: linear-gradient(#a7618f, #6d3947,#591628);
+    background: linear-gradient(transparent, rgb(69, 69, 69), var(--negro-texto));  
+    border-image-source: linear-gradient(var(--azul-claro), var(--azul-medio), var(--azul-oscuro));
     border-width: 6px;
     border-image-slice: 1 1 1 1;
-    border-radius: 15px;
 }
 
 .tarjetalibro img{
     width: 100%;
     height: auto;
     max-height: 200px;
-    border-radius: 15px;
     object-fit: cover;
     border-radius: 15px;
+}
+
+    /*tabla de contenido*/
+#tablacont tbody > tr:nth-child(4n - 1), tbody > tr:nth-child(4n){
+    background-color: var(--azul-claro);
+}
+
+#tablacont tbody > tr:nth-child(4n - 3), tbody > tr:nth-child(4n - 2){
+    background-color: var(--azul-medio);
 }
 
 
@@ -310,13 +319,13 @@ li#elemespec{
     font-family:'Times New Roman';
     font-size: 90px;
     text-align: center;
-    text-shadow: 3px 3px 5px #2c2c2c;
+    text-shadow: 3px 3px 5px var(--gris-sombra);
     flex: 100%;
     margin: 10px;
 }
 
 .frankenstein:not(h2){
-    background-color: #c9c9c9;
+    background-color: var(--blanco-base);
     column-count: 3;
     column-gap: 20px;
     display: flex;
@@ -350,7 +359,6 @@ ul.infof > li{
 .infof ul li:last-child { 
     list-style: none;
 }
-
 
 .infof ul ul li:last-child { 
     color: var(--negro-texto);
@@ -391,7 +399,7 @@ ul.infof > li{
     font-family:'Times New Roman';
     font-size: 90px;
     text-align: center;
-    text-shadow: 3px 3px 5px #2c2c2c;
+    text-shadow: 3px 3px 5px var(--gris-sombra);
     flex: 100%;
     margin: 10px;
 }
@@ -441,12 +449,10 @@ ul.infoi > li{
     list-style: none;
 }
 
-
 .infoi ul ul li:last-child { 
     text-shadow: 3px 3px 5px var(--negro-texto);
     list-style: circle;
 }
-
 
 .sinipi > h3{
     text-decoration: 2px double underline;
@@ -512,7 +518,6 @@ ul.infoi > li{
     margin: 10px;
 }
 
-
 .formulario{
     justify-content: center;
     font-size: larger;
@@ -572,7 +577,7 @@ ul.infoi > li{
 }
 
 
-/*footer de todas las paginas */ 
+/* footer de todas las paginas */ 
 footer{
     color: var(--azul-claro);
     background-color: var(--azul-oscuro);
