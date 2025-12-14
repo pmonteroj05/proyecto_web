@@ -6,76 +6,291 @@
         <link rel="stylesheet" href="style.css">
         
     </head>
-    <body>
+
+    <body class="contenido">
         <header>
-            <h1>NOMBRE PROYECTO</h1>
-            <br><br>
+            <img src="recursos/icono_libro.svg" alt="libro">
+            <h1>LECTURAS DE TERROR</h1>
             <ul class="indice">
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="contenido.html">CONTENIDO</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="index.html" target="_self">INICIO</a></li>
+                <li><a href="contenido.html" target="_self">CONTENIDO</a></li>
+                <li><a href="contacto.html" target="_self">CONTACTO</a></li>
             </ul>
         </header>
 
+        <h6>Contenido</h6>
+
         <h2>AUTORES Y LIBROS</h2>
-        <ul>
-            <li>Mary Shelley</li>
+        <ul class="list">
+            <li>Mary Shelley
                 <ul>
-                    <li>Frankenstein</li>
-                    <li>El último hombre</li>
+                    <li class="tarjetalibro" id="elemespec">
+                        <img src="recursos/recuscontent/franken.jpg" alt="Portada de Frankenstein">
+                            <a href="detalles1.html" target="_blank">
+                                Frankenstein</a>
+                    </li>
+
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/ulthomb.jpg" alt="Portada de El último hombre">
+                        El último hombre
+                    </li>
                 </ul>
-            <li>Stephen King</li>
+            </li>
+
+            <li>Stephen King
                 <ul>
-                    <li>Misery</li>
-                    <li>Carrie</li>
+                    <li class="tarjetalibro" id="elemespec">
+                        <img src="recursos/recuscontent/itsk.jpg" alt="Portada de IT">
+                            <a href="detalles2.html" target="_blank">
+                                IT</a>
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/carrie.jpg" alt="Portada de Carrie">
+                        Carrie
+                    </li>
                 </ul>
-            <li>Edgar Allan Poe</li>
+            </li>
+
+            <li>Edgar Allan Poe
                 <ul>
-                    <li>El corazón delator</li>
-                    <li>La máscara de la muerte roja</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/cordelat.jpg" alt="Portada de El corazon delator">
+                        El corazón delator
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/mascmuert.jpg" alt="Portada de La máscara de la muerte roja">
+                        La máscara de la muerte roja
+                    </li>
                 </ul>
-            <li>H. P. Lovecraft</li>
+            </li>
+
+            <li>H. P. Lovecraft
                 <ul>
-                    <li>Aire frío</li>
-                    <li>El alquimista</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/airefrio.jpg" alt="Portada de Aire frío">
+                        Aire frío
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/elalquim.jpg" alt="Portada de El alquimista">
+                        El alquimista
+                    </li>
                 </ul>
-            <li>Mariana Enríquez</li>
+            </li>
+
+            <li>Mariana Enríquez
                 <ul>
-                    <li>Nuestra parte de noche</li>
-                    <li>Las cosas que perdimos en el fuego</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/nuestrnoche.jpg" alt="Portada de Nuestra parte de noche">
+                        Nuestra parte de noche
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/perdfuego.jpg" alt="Portada de Las cosas que perdimos en el fuego">
+                        Las cosas que perdimos en el fuego
+                    </li>
                 </ul>
-            <li>Mónica Ojeda</li>
+            </li>
+
+            <li>Mónica Ojeda
                 <ul>
-                    <li>Mandíbula</li>
-                    <li>Nefando</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/mandib.jpg" alt="Portada de Mandíbula">
+                        Mandíbula
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/nefando.jpg" alt="Portada de Nefando">
+                        Nefando
+                    </li>
                 </ul>
-            <li>Bram Stoker</li>
+            </li>
+
+            <li>Bram Stoker
                 <ul>
-                    <li>Drácula</li>
-                    <li>La dama del sudario</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/dracula.jpg" alt="Portada de Drácula">
+                        Drácula
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/sudario.jpg" alt="Portada de La dama del sudario">
+                        La dama del sudario
+                    </li>
                 </ul>
-            <li>Clive Barker</li>
+            </li>
+
+            <li>Clive Barker
                 <ul>
-                    <li>Hellraiser</li>
-                    <li>Libros de sangre</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/hellraiser.jpg" alt="Portada de Hellraiser">
+                        Hellraiser
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/librsangre.jpg" alt="Portada de Libros de sangre">
+                        Libros de sangre
+                    </li>
                 </ul>
-            <li>Shirley Jackson</li>
+            </li>
+
+            <li>Shirley Jackson
                 <ul>
-                    <li>La maldición de Hill House</li>
-                    <li>Siempre hemos vivido en el castillo</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/hillhouse.jpg" alt="Portada de La maldición de Hill House">
+                        La maldición de Hill House
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/castillo.jpg" alt="Portada de Siempre hemos vivido en el castillo">
+                        Siempre hemos vivido en el castillo
+                    </li>
                 </ul>
-            <li>Algernon Blackwood</li>
+            </li>
+
+            <li>Algernon Blackwood
                 <ul>
-                    <li>Los sauces</li>
-                    <li>El Wendigo</li>
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/sauces.jpg" alt="Portada de Los sauces">
+                        Los sauces
+                    </li>
+                    
+                    <li class="tarjetalibro">
+                        <img src="recursos/recuscontent/wendigo.jpg" alt="Portada de El wendigo">
+                        El Wendigo
+                    </li>
                 </ul>
+            </li>
         </ul>
 
+        <div>
+            <table class="tabla" id="tablacont">
+                <thead>
+                    <tr>
+                        <td colspan="4">Tabla de resumen del contenido</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Autor</td>
+                        <td>Título</td>
+                        <td>Precio</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">1</td>
+                        <td rowspan="2">Mary Shelley</td>
+                        <td>Frankenstein</td>
+                        <td>16,40€</td>
+                    </tr>
+                    <tr>
+                        <td>El último hombre</td>
+                        <td>22,85€</td>
+                        
+                    </tr>
+                    <tr>
+                        <td rowspan="2">2</td>
+                        <td rowspan="2">Stephen King</td>
+                        <td>IT</td>
+                        <td>18,95€</td>
+                    </tr>
+                    <tr>
+                        <td>Carrie</td>
+                        <td>22,80€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">3</td>
+                        <td rowspan="2">Edgar Allan Poe</td>
+                        <td>El corazón delator</td>
+                        <td>7,70€</td>
+                    </tr>
+                    <tr>
+                        <td>La máscara de la muerte roja</td>
+                        <td>8,95€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">4</td>
+                        <td rowspan="2">H. P. Lovecraft</td>
+                        <td>Aire frío</td>
+                        <td>8,95€</td>
+                    </tr>
+                    <tr>
+                        <td>El alquimista</td>
+                        <td>11,25€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">5</td>
+                        <td rowspan="2">Mariana Enríquez</td>
+                        <td>Nuestra parte de noche</td>
+                        <td>18,95€</td>
+                    </tr>
+                    <tr>
+                        <td>Las cosas que perdimos en el fuego</td>
+                        <td>12,75€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">6</td>
+                        <td rowspan="2">Mónica Ojeda</td>
+                        <td>Mandíbula</td>
+                        <td>21,95€</td>
+                    </tr>
+                    <tr>
+                        <td>Nefando</td>
+                        <td>21,95€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">7</td>
+                        <td rowspan="2">Bram Stoker</td>
+                        <td>Drácula</td>
+                        <td>25,99€</td>
+                    </tr>
+                    <tr>
+                        <td>La dama del sudario</td>
+                        <td>8,95€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">8</td>
+                        <td rowspan="2">Clive Barker</td>
+                        <td>Hellraiser</td>
+                        <td>18,50€</td>
+                    </tr>
+                    <tr>
+                        <td>Libros de sangre</td>
+                        <td>17,50€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">9</td>
+                        <td rowspan="2">Shirley Jackson</td>
+                        <td>La maldición de Hill House</td>
+                        <td>19,35€</td>
+                    </tr>
+                    <tr>
+                        <td>Siempre hemos vivido en el castillo</td>
+                        <td>15,15€</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">10</td>
+                        <td rowspan="2">Algernon Blackwood</td>
+                        <td>Los sauces</td>
+                        <td>18,95€</td>
+                    </tr>
+                    <tr>
+                        <td>El Wendigo</td>
+                        <td>9,00€</td>
+                    </tr>
 
-        
-        
+                </tbody>
+            </table>
+        </div>
+
+        <div class="flecha">
+            <a href="#top"><img src="recursos/flecha_arriba.svg" alt="flech hacia arriba" width="20px"></a>
+        </div>
     </body>
+
     <footer>
-        <p>&copy; Proyecto</p>
+        <p>&copy; Lecturas de Terror</p>
     </footer>
 </html>

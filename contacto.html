@@ -1,92 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<!-- Página de contacto. Incluirá un formulario de contacto para los usuarios que necesiten ayuda de los administradores de la web. 
-Dicho formulario contendrá al menos 4 tipos distintos de inputs (Sin contar con el submit). Además, deberá incluir validaciones de 
-los campos usando expresiones regulares -->
-
-
     <head>
         <title>FORMULARIO</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
         
     </head>
-    <body>
-        <header>
-            <h1>NOMBRE PROYECTO</h1>
-            <br><br>
+
+    <body class="contacto">
+        <header id="headf">
+            <img src="recursos/icono_libro.svg" alt="libro">
+            <h1>LECTURAS DE TERROR</h1>
             <ul class="indice">
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="contenido.html">CONTENIDO</a></li>
-                <li><a href="contacto.html">CONTACTO</a></li>
+                <li><a href="index.html" target="_self">INICIO</a></li>
+                <li><a href="contenido.html" target="_self">CONTENIDO</a></li>
+                <li><a href="contacto.html" target="_self">CONTACTO</a></li>
             </ul>
         </header>
-        <br><br>
+        
+        <h6>Contacto</h6>
 
+        <div id="central">
+            <h2>FORMULARIO DE CONTACTO</h2>
+            <p>¿Tienes alguna pregunta, sugerencia o comentario? Completa el formulario y nos pondremos en contacto contigo lo antes posible; tu opinión es importante para seguir mejorando nuestro espacio.</p>
+        
+            <form action="recibir.php" method="get" class="formulario">
+                <b>Información de contacto</b>
 
+                <p>
+                <label for="nombre">Nombre: </label>
+                <input type="text" 
+                    placeholder="Introduce tu nombre" 
+                    pattern="[A-Z]{1}[a-z]*"
+                    required/>
+                </p>
 
+                <p>
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" 
+                    placeholder="Introduce tus apellidos" 
+                    pattern="[A-Z]{1}[a-z]* [A-Z]{1}[a-z]*"/>
+                </p>
 
+                <p>
+                <label for="mail">Correo electrónico: </label>
+                <input type="email" placeholder="Introduce tu email" 
+                    pattern="[a-z0-9]+@[a-z0-9]+[.com|.es]" 
+                    required/>
+                </p>
 
+                <p>
+                <label for="telefono">Número de teléfono: </label>
+                <input type="tel" placeholder="Introduce tu número de teléfono" 
+                    pattern="[\+?[0-9]?[0-9]?[0-9]? ?[0-9]]{9}"/>
+                </p>
 
+                <p>
+                <label for="ambito">Motivo de contacto</label>
+                    <select name="ambito"> 
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="queja">Queja</option>
+                        <option value="recomendacion">Recomendación de libro</option>
+                        <option value="error">Error en la web</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </p>
 
+                <br><br>
+                
+                <b>Cuestiones a resolver</b>
+                <p>
+                    <label for="comentario"></label>
+                    <textarea id="comentarios" name="text" cols="30" rows="15" minlength="10" maxlength="100" required></textarea>
+                </p>
 
+                <br><br>
 
+                <b>Información adicional</b>
+                <p>
+                    ¿Qué subgénero de terror prefieres? <input list="generos">
+                    <datalist id="generos">
+                        <option value="Terror gótico"></option>
+                        <option value="Terror psicológico"></option>
+                        <option value="Terror cósmico"></option>
+                        <option value="Slasher"></option>
+                        <option value="Terror sobrenatural"></option>
+                        <option value="Otro"></option> 
+                    </datalist>
+                </p>
+                <p>¿Te gustaría recibir recomendaciones personalizadas de libros basadas en tus gustos?<input type="checkbox" name="promo" checked /></p>
 
-        <h2>FORMULARIO</h2>
-        <form action="recibir.php" method="get" class="formulario">
-            <b>Informacion de contacto</b>
+                <br><br>
 
-            <p>
-            <label for="nombre">Nombre: </label>
-            <input type="text" 
-                placeholder="Introduce tu nombre" 
-                pattern="[A-Z]{1}[a-z]*"
-                required/>
-            </p>
+                <p><input type="reset" value="Borrar" class="reset"></p>
+                <p><input type="submit" value="Enviar"></p>
+            </form>
+        </div>
 
-            <p>
-            <label for="apellidos">Apellidos: </label>
-            <input type="text" 
-                placeholder="Introduce tus apellidos" 
-                pattern="[A-Z]{1}[a-z]* [A-Z]{1}[a-z]*"/>
-            </p>
-
-            <p>
-            <label for="mail">Correo electrónico: </label>
-            <input type="email" placeholder="Introduce tu email" 
-                pattern="[a-z0-9]+@[a-z0-9]+[.com|.es]" 
-                required/>
-            </p>
-
-            <p>
-            <label for="telefono">Número de teléfono: </label>
-            <input type="tel" placeholder="Introduce tu número de teléfono" 
-                pattern="[\+?[0-9]?[0-9]?[0-9]? ?[0-9]{10}"/>
-            </p>
-
-            <p>
-            <label for="ambito">Ámbito</label>
-            <p><input type="radio" name="ambito" value="p" />Profesional</p>
-            <p><input type="radio" name="ambito" value="e" />Estudiante</p>
-            <p><input type="radio" name="ambito" value="c" />Creador</p>
-            <p><input type="radio" name="ambito" value="i" />Interés</p>
-            <p><input type="radio" name="ambito" value="o" />Otro</p>
-            </p>
-
-            <b>Cuestiones a resolver</b>
-
-            <p>
-            <label for="comentario"></label>
-            <textarea id="comentarios" name="text" cols="30" rows="15" minlength="10" maxlength="100" required></textarea>
-            </p>
-
-            <p><input type="reset" value="Borrar"></p>
-            <p><input type="submit" value="Enviar"></p>
-
-        </form>
+        <div class="flecha">
+            <a href="#top"><img src="recursos/flecha_arriba.svg" alt="flecha hacia arriba" width="20px"></a>
+        </div>
     </body>
+    
     <footer>
-        <p>&copy; Proyecto</p>
+        <p>&copy; Lecturas de Terror</p>
     </footer>
 </html>
